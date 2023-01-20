@@ -6,6 +6,9 @@ contract Intro {
 
         // Yul assembly magic happens within assembly{} section
         assembly {
+            let aVar := mol
+            mstore(0x40, aVar)
+            return(0x40, 0x20)
             // stack variables are instantiated with
             // let variable_name := VALßUE
             // instantiate a stack variable that holds the value of mol
